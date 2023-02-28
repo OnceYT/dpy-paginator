@@ -3,12 +3,12 @@
 
 import discord
 
-class ModalPage(discord.ui.Modal, title = "Jump to page"): 
+class ModalPage(discord.ui.Modal, title = "Jump to page"): 
   def __init__(self, embeds: list, author_ids: list, timeout: int): 
     super().__init__(timeout = timeout) 
     self.embeds = embeds 
     self.author_ids = author_ids 
-    self.input.label = f"Page number: (0-{len(self.embeds)})" 
+    self.input.label = f"Page number: (0-{len(self.embeds)})" 
   
   input = discord.ui.TextInput(label = "placeholder", placeholder = "Enter the page number...") 
   
