@@ -3,7 +3,7 @@
 
 import discord
 
-class ModalPage(discord.ui.Modal, title = "Jump to page"): 
+class ModalPage(discord.ui.Modal, title = "Jump to page"): 
   def __init__(self, embeds: list, author_ids: list, timeout: int): 
     super().__init__(timeout = timeout) 
     self.embeds = embeds 
