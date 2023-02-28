@@ -7,6 +7,3 @@ authors = ["OnceYT <sahaa6919@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 discord.py = "^2.0.0"
-
-[tool.black]
-replace-tabs = true
