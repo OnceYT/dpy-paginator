@@ -1,3 +1,6 @@
+# Copyright (c) 2023 OnceYT
+# Licensed under the MIT License
+
 import discord
 
 class ModalPage(discord.ui.Modal, title = "Jump to page"):
