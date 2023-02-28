@@ -1,12 +1,9 @@
 [tool.poetry]
 name = "dpy-paginator"
-version = "0.1.0"
-description = "A Python paginator for Discord.py"
-authors = ["Your Name <your@email.com>"]
+version = "1.0.0"
+description = "A paginator utility for Discord.py"
+authors = ["OnceYT <sahaa6919@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-discord.py = "^2.1.0"
-
-[tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
+discord.py = "^2.0.0"
