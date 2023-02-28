@@ -68,7 +68,7 @@ async def example(ctx: commands.Context):
   await ctx.send(embed = output.embed, view = output.view)
 ```
 This command has the following output - 
-![]()
+![discord](/images/example_commandsusage.png)
 
 ##### <a name='appcommands_usage'></a>discord.app_commands usage: (ephemeral)
 ```py
