@@ -1,7 +1,7 @@
 # Copyright (c) 2023 OnceYT
 # Licensed under the MIT License
 
-import discord 
+import discord
   
  class ModalPage(discord.ui.Modal, title = "Jump to page"): 
    def __init__(self, embeds: list, author_ids: list, timeout: int): 
