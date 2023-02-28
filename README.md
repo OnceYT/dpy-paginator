@@ -1,7 +1,7 @@
 # dpy-paginator
 
 <details>
-<summary><h3>Table of contents</h3></summary>
+<summary><strong>Table of contents</strong></summary>
 
 - [Overview](#overview)
 - [Installation](#installation)
@@ -67,9 +67,9 @@ async def example(ctx: commands.Context):
   output = await Paginate(embeds = [embed1, embed2])
   await ctx.send(embed = output.embed, view = output.view)
 ```
-This command has the following output - 
+This command has the following output:
 
-![discord.ext.Commands example output](https://www.dropbox.com/s/s5icu7eiyhhncgj/example_disabled.png?dl=0)
+![discord.ext.Commands example image](https://i.imgur.com/7aOIIpK.png)
 
 ##### <a name='appcommands_usage'></a>discord.app_commands usage: (ephemeral)
 ```py
@@ -96,8 +96,8 @@ You can control which user(s) can interact with the view by passing a `author_id
 
 await Paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
 ```
-When anyone except the specified user(s) try to interact, the paginator ignores that interaction.
-![]()
+When anyone except the specified user(s) try to interact, the paginator ignores that interaction:
+![author_ids error example image](https://i.imgur.com/QY7dTrw.png)
 
 ##### <a name='timeout'></a>Adding a timeout: (`timeout: int` param)
 
@@ -126,6 +126,8 @@ if output.view.timedout: # check if the view is timedout
 # the view will automatically timeout incase this check returns False
 ```
 Note that incase of ephemeral responses (or scenarios where the output will be deleted before the timeout), this extra step is probably not worth it.
-![]()
+
+Example of a timedout view:
+![timedout image](https://i.imgur.com/qzI9eax.png)
 
 [^1]: To explain this, the `PaginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `Paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
