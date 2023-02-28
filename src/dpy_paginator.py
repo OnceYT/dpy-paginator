@@ -2,6 +2,7 @@
 # Licensed under the MIT License
 
 import discord
+from discord.ext import commands
 
 class ModalPage(discord.ui.Modal, title = "Jump to page"):
   def __init__(self, embeds: list, author_ids: list, timeout: int):
@@ -25,13 +26,14 @@ class ModalPage(discord.ui.Modal, title = "Jump to page"):
       await interaction.response.defer()
 
 class PaginateButtons(discord.ui.View):
-  def __init__(self, embeds: list[discord.Embed], page: int, author_ids: list[int], timeout: int, interaction: discord.Interaction = None):
+  def __init__(self, embeds: list[discord.Embed], page: int, author_ids: list[int], timeout: int, interaction: discord.Interaction = None, timedout: bool = False):
     super().__init__(timeout = timeout)
     self.embeds = embeds
     self.page = page
+    self.timedout = timedout
     self.author_ids = author_ids
-    self.timeout = timeout 
-    self.interaction = interaction 
+    self.timeout = timeout
+    self.interaction = interaction
     self.buttonModal.label = f"{page+1}/{len(self.embeds)}"
     #self.remove_item(self.buttonPaginateLeftmost)
      
@@ -45,13 +47,16 @@ class PaginateButtons(discord.ui.View):
       self.buttonPaginateRight.disabled = False
 
   async def on_timeout(self):
+    for children in self.children:
+      children.disabled = True
+    self.timedout = True
     if self.interaction:
-      for children in self.children:
-        children.disabled = True
       if self.interaction.message.flags.ephemeral:
         await self.interaction.edit_original_response(view = self)
       else:
         await self.interaction.message.edit(view = self)
+    elif self.ctx:
+      await self.ctx.message.edit(view = self)
 
   @discord.ui.button(emoji = "⏪", style=discord.ButtonStyle.grey, disabled = True)
   async def buttonPaginateLeftmost(self, interaction: discord.Interaction, button: discord.ui.Button):
@@ -104,7 +109,7 @@ class PaginateButtons(discord.ui.View):
       await interaction.response.defer()
 
 class Paginator():
-  def __init__(self, embeds: list[discord.Embed], author_ids: list[int], timeout: int):
+  def __init__(self, embeds: list[discord.Embed], author_ids: list[int], timeout: int, interaction: discord.Interaction = None):
     self.embeds = embeds
     self.embed = self.embeds[0]
     self.author_ids = author_ids
