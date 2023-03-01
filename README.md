@@ -84,11 +84,13 @@ async def example_command(interaction: discord.Interaction):
   output = await Paginate(embeds = [embed1, embed2])
   await interaction.followup.send(embed = output.embed, view = output.view)  
 ```
+This command has the following output:
+
+![discord.app_commands (ephemeral) example image](https://i.imgur.com/tA78jy0.png)
 
 # <a name='options'></a>Options and Parameters 
 
 ##### <a name='author_ids'></a>Control who can interact: (`author_ids: list[int]` param)
-
 
 You can control which user(s) can interact with the view by passing a `author_ids` list.
 ```py
