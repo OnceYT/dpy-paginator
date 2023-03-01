@@ -1,4 +1,4 @@
-[tool.poetry]
+[project]
 name = "dpy-paginator"
 version = "1.0.0"
 description = "A paginator utility for discord.py"
@@ -11,6 +11,6 @@ homepage = "https://github.com/OnceYT/dpy-paginator"
 documentation = "https://github.com/OnceYT/dpy-paginator/blob/main/README.md"
 keywords = ["discord", "py", "discord.py", "paginator"]
 
-[tool.poetry.dependencies]
+[project.dependencies]
 python = "^3.9"
 discord.py = "^2.0.0"
