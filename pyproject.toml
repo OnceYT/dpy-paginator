@@ -2,7 +2,7 @@
 name = "dpy-paginator"
 version = "1.0.0"
 description = "A paginator utility for discord.py"
-authors = ["OnceYT <sahaa6919@gmail.com>"]
+authors = [{name = "OnceYT", email = "sahaa6919@gmail.com"}]
 dependencies = ["discord.py"]
 readme = "README.md"
 repository = "https://github.com/OnceYT/dpy-paginator"
