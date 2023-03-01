@@ -11,6 +11,6 @@ homepage = "https://github.com/OnceYT/dpy-paginator"
 documentation = "https://github.com/OnceYT/dpy-paginator/blob/main/README.md"
 keywords = ["discord", "py", "discord.py", "paginator"]
 
-[project.dependencies]
+[dependencies]
 python = "^3.9"
 discord.py = "^2.0.0"
