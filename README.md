@@ -38,11 +38,11 @@ pip install git+https://github.com/onceyt/dpy-paginator.git@v1.0.0
 ##### <a name='basic_usage'></a>Basic usage:
 ```py
 import discord
-from dpy_paginator import Paginate
+from dpy_paginator import paginate
 
 embed1 = discord.Embed(title = "This is embed#1")
 embed2 = discord.Embed(title = "This is embed#2")
-output = await Paginate(embeds = [embed1, embed2])
+output = await paginate(embeds = [embed1, embed2])
 
 # output.embed gives you the first embed of the pagination
 # output.view gives you the discord.ui.View that controls the pagination
@@ -56,7 +56,7 @@ await Messagable.send(embed = output.embed, view = output.view)
 ```py
 import discord
 from discord.ext import commands
-from dpy_paginator import Paginate
+from dpy_paginator import paginate
 
 bot = discord.Bot() # your discord.Bot object
 
@@ -64,7 +64,7 @@ bot = discord.Bot() # your discord.Bot object
 async def example(ctx: commands.Context):
   embed1 = discord.Embed(title = "This is Embed#1")
   embed2 = discord.Embed(title = "This is Embed#2")
-  output = await Paginate(embeds = [embed1, embed2])
+  output = await paginate(embeds = [embed1, embed2])
   await ctx.send(embed = output.embed, view = output.view)
 ```
 This command has the following output:
@@ -74,14 +74,14 @@ This command has the following output:
 ##### <a name='appcommands_usage'></a>discord.app_commands usage: (ephemeral)
 ```py
 from discord import app_commands
-from dpy_paginator import Paginator
+from dpy_paginator import paginate
 
 @app_commands.command(name='example')
 async def example_command(interaction: discord.Interaction):
   await interaction.response.defer(ephemeral = True, thinking = True)
   embed1 = discord.Embed(title = "This is Embed#1")
   embed2 = discord.Embed(title = "This is Embed#2")
-  output = await Paginate(embeds = [embed1, embed2])
+  output = await paginate(embeds = [embed1, embed2])
   await interaction.followup.send(embed = output.embed, view = output.view)  
 ```
 This command has the following output:
@@ -96,7 +96,7 @@ You can control which user(s) can interact with the view by passing a `author_id
 ```py
 ...
 
-await Paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
+await paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
 ```
 When anyone except the specified user(s) try to interact, the paginator ignores that interaction:
 ![author_ids error example image](https://i.imgur.com/QY7dTrw.png)
@@ -108,7 +108,7 @@ By default, the view has a timeout of 90 seconds but this can be changed by pass
 ```py
 ...
 
-await Paginate(embeds = [embed1, embed2], timeout = 60)
+await paginate(embeds = [embed1, embed2], timeout = 60)
 ```
 The buttons get automatically disabled after timeout (except when no button is interacted with)[^1]. You can also use `timeout = None` for no timeout.
 
@@ -121,7 +121,7 @@ import asyncio
 ...
 timeout = 60
 
-output = await Paginate(embeds = [embed1, embed2], timeout = timeout)
+output = await paginate(embeds = [embed1, embed2], timeout = timeout)
 message = await Messageable.send(embed = output.embed, view = output.view)
 
 await asyncio.sleep(timeout)
@@ -132,4 +132,4 @@ if output.view.timedout: # check if the view is timedout
 ```
 Note that incase of ephemeral responses (or scenarios where the output will be deleted before the timeout), this extra step is probably not worth it.
 
-[^1]: To explain this, the `PaginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `Paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
+[^1]: To explain this, the `paginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
