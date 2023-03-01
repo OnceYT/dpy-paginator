@@ -5,9 +5,6 @@ description = "A paginator utility for discord.py"
 authors = [{name = "OnceYT", email = "sahaa6919@gmail.com"}]
 dependencies = ["discord.py"]
 readme = "README.md"
-repository = "https://github.com/OnceYT/dpy-paginator"
-homepage = "https://github.com/OnceYT/dpy-paginator"
-documentation = "https://github.com/OnceYT/dpy-paginator/blob/main/README.md"
 keywords = ["discord", "py", "discord.py", "paginator"]
 
 [dependencies]
