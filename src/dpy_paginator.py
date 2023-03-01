@@ -55,8 +55,6 @@ class paginateButtons(discord.ui.View):
         await self.interaction.edit_original_response(view = self)
       else:
         await self.interaction.message.edit(view = self)
-    elif self.ctx:
-      await self.ctx.message.edit(view = self)
 
   @discord.ui.button(emoji = "⏪", style=discord.ButtonStyle.grey, disabled = True)
   async def buttonPaginateLeftmost(self, interaction: discord.Interaction, button: discord.ui.Button):
