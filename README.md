@@ -25,7 +25,7 @@ Some of it's features are -
 The paginator consists of 4 buttons - ⏪, ◀️, 'Jump To' modal, ▶️, ⏩
 - ⏪ - Shows the first embed. Disabled if there are less than 3 embeds or if already on the first embed.
 - ◀️ - Shows the previous embed. Disabled if already on the first embed.
-- 'Jump To' modal - Triggers a `discord.ui.Modal` that takes you to the page number you input. Disabled if there are less than 3 embeds.
+- 'Jump To' modal - Triggers a `discord.ui.Modal` that takes you to the page number you input. Disabled if there are less than 4 embeds.
 - ▶️ - Shows the next embed. Disabled if already on the last embed.
 - ⏩ - Shows the last embed. Disabled if there are less than 3 embeds or if already on the last page.
 
@@ -110,6 +110,9 @@ await Paginate(embeds = [embed1, embed2], timeout = 60)
 ```
 The buttons get automatically disabled after timeout (except when no button is interacted with)[^1]. You can also use `timeout = None` for no timeout.
 
+Example of a timedout view:
+![timedout image](https://i.imgur.com/qzI9eax.png)
+
 In the scenario that no button is interacted with and the view gets timedout, the buttons will not be automatically disabled resulting in the need of an extra step. `output.view.timedout` returns a boolean which we can use to check if the view has timedout.
 ```py
 import asyncio
@@ -126,8 +129,5 @@ if output.view.timedout: # check if the view is timedout
 # the view will automatically timeout incase this check returns False
 ```
 Note that incase of ephemeral responses (or scenarios where the output will be deleted before the timeout), this extra step is probably not worth it.
-
-Example of a timedout view:
-![timedout image](https://i.imgur.com/qzI9eax.png)
 
 [^1]: To explain this, the `PaginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `Paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
