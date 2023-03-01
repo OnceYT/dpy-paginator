@@ -124,7 +124,7 @@ timeout = 60
 output = await paginate(embeds = [embed1, embed2], timeout = timeout)
 message = await Messageable.send(embed = output.embed, view = output.view)
 
-await asyncio.sleep(timeout)
+await asyncio.sleep(timeout + 0.5) # add 0.5 to timeout to account for processing delays
 if output.view.timedout: # check if the view is timedout
   await message.edit(view = output.view) # manually edit the buttons if the output is timedout
 
