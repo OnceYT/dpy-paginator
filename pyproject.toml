@@ -2,7 +2,6 @@
 name = "dpy-paginator"
 version = "1.0.0"
 description = "A paginator utility for discord.py"
-license = "MIT"
 authors = ["OnceYT <sahaa6919@gmail.com>"]
 dependencies = ["discord.py"]
 readme = "README.md"
