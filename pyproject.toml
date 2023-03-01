@@ -5,7 +5,7 @@ description = "A paginator utility for discord.py"
 authors = [
     {name = "OnceYT", email = "sahaa6919@gmail.com"},
 ]
-license = {text = "Apache-2.0"}
+license = {text = "MIT"}
 dependencies = ["discord.py"]
 readme = "README.md"
 keywords = ["discord", "py", "discord.py", "paginator"]
