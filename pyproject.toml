@@ -6,7 +6,6 @@ authors = [
     "OnceYT <sahaa6919@gmail.com>",
 ]
 dependencies = ["discord.py"]
-license = "MIT"
 readme = "README.md"
 keywords = ["discord", "py", "discord.py", "paginator"]
 
