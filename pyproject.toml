@@ -26,7 +26,6 @@ description = "A paginator utility for discord.py"
 authors = ["OnceYT <sahaa6919@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "dpy_paginator"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
