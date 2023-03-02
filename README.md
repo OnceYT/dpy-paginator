@@ -99,6 +99,7 @@ You can control which user(s) can interact with the view by passing a `author_id
 await paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
 ```
 When anyone except the specified user(s) try to interact, the paginator ignores that interaction:
+
 ![author_ids error example image](https://i.imgur.com/QY7dTrw.png)
 
 ##### <a name='timeout'></a>Adding a timeout: (`timeout: int` param)
@@ -113,6 +114,7 @@ await paginate(embeds = [embed1, embed2], timeout = 60)
 The buttons get automatically disabled after timeout (except when no button is interacted with)[^1]. You can also use `timeout = None` for no timeout.
 
 Example of a timedout view:
+
 ![timedout image](https://i.imgur.com/qzI9eax.png)
 
 In the scenario that no button is interacted with and the view gets timedout, the buttons will not be automatically disabled resulting in the need of an extra step. `output.view.timedout` returns a boolean which we can use to check if the view has timedout.
