@@ -114,9 +114,8 @@ class paginator():
     self.timeout = timeout
     self.view = paginateButtons(embeds = self.embeds, author_ids = self.author_ids, page = 0, timeout = self.timeout)
 
-async def paginate(embeds: list[discord.Embed], author_ids: list[int] = None, timeout: int = 90) -> paginator:
-  """|coro| 
-  
+def paginate(embeds: list[discord.Embed], author_ids: list[int] = None, timeout: int = 90) -> paginator:
+  """  
   Returns a dpy_components.paginator object that contains the first embed
   and the view associated with it.
   
