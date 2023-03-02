@@ -1,5 +1,7 @@
 # dpy-paginator
 
+This is the development branch, for v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0).
+
 <details>
 <summary><strong>Table of contents</strong></summary>
 
@@ -56,7 +58,7 @@ from dpy_paginator import paginate
 
 embed1 = discord.Embed(title = "This is embed#1")
 embed2 = discord.Embed(title = "This is embed#2")
-output = await paginate(embeds = [embed1, embed2])
+output = paginate(embeds = [embed1, embed2])
 
 # output.embed gives you the first embed of the pagination
 # output.view gives you the discord.ui.View that controls the pagination
@@ -78,7 +80,7 @@ bot = discord.Bot() # your discord.Bot object
 async def example(ctx: commands.Context):
   embed1 = discord.Embed(title = "This is Embed#1")
   embed2 = discord.Embed(title = "This is Embed#2")
-  output = await paginate(embeds = [embed1, embed2])
+  output = paginate(embeds = [embed1, embed2])
   await ctx.send(embed = output.embed, view = output.view)
 ```
 This command has the following output:
@@ -95,7 +97,7 @@ async def example_command(interaction: discord.Interaction):
   await interaction.response.defer(ephemeral = True, thinking = True)
   embed1 = discord.Embed(title = "This is Embed#1")
   embed2 = discord.Embed(title = "This is Embed#2")
-  output = await paginate(embeds = [embed1, embed2])
+  output = paginate(embeds = [embed1, embed2])
   await interaction.followup.send(embed = output.embed, view = output.view)  
 ```
 This command has the following output:
@@ -110,7 +112,7 @@ You can control which user(s) can interact with the view by passing a `author_id
 ```py
 ...
 
-await paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
+output = paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
 ```
 When anyone except the specified user(s) try to interact, the paginator ignores that interaction:
 
@@ -123,7 +125,7 @@ By default, the view has a timeout of 90 seconds but this can be changed by pass
 ```py
 ...
 
-await paginate(embeds = [embed1, embed2], timeout = 60)
+output = paginate(embeds = [embed1, embed2], timeout = 60)
 ```
 The buttons get automatically disabled after timeout (except when no button is interacted with)[^1]. You can also use `timeout = None` for no timeout.
 
@@ -137,7 +139,7 @@ import asyncio
 ...
 timeout = 60
 
-output = await paginate(embeds = [embed1, embed2], timeout = timeout)
+output = paginate(embeds = [embed1, embed2], timeout = timeout)
 message = await Messageable.send(embed = output.embed, view = output.view)
 
 await asyncio.sleep(timeout + 0.5) # add 0.5 to the timeout to account for processing delays
