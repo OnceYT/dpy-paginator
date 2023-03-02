@@ -17,6 +17,16 @@
 ##### <a name='overview'></a>Built and tested on [discord.py](https://github.com/Rapptz/discord.py) 2.1.1
 A discord.py utility with no external dependencies that makes paginating embeds easier.
 
+<details>
+<summary><h5>Quick links</h5></summary>
+
+- [Support Discord Server](https://discord.gg/bwvR4dTqHT)
+- [Documentation](https://github.com/OnceYT/dpy-paginator/blob/main/README.md)
+- [Source](https://github.com/OnceYT/dpy-paginator)
+- [PyPi](https://pypi.org/project/dpy-paginator/)
+
+</details>
+
 Some of it's features are -
 - Easy to use.
 - Supports both ephemeral and non-ephemeral responses.
