@@ -31,6 +31,10 @@ The paginator consists of 4 buttons - ⏪, ◀️, 'Jump To' modal, ▶️, ⏩
 
 # <a name='installation'></a>Installation
 ```
+pip install dpy-paginator
+```
+or
+```
 pip install git+https://github.com/onceyt/dpy-paginator.git@v1.0.0
 ```
 
