@@ -128,4 +128,18 @@ def paginate(embeds: list[discord.Embed], author_ids: list[int] = None, timeout:
   timeout: :class:`int`
       An optional integer for specifying the timeout (in seconds). Defaults to 90.
   """
+  if not isinstance(embeds, list):
+    raise TypeError(f"embeds: Expected a list of discord.Embed objects, got {type(embed).__name__} instead.")
+  for embed in embeds:
+    if not isinstance(embed, discord.Embed):
+      raise TypeError(f"embeds: Expected discord.Embed objects, got {type(embed).__name__} instead.")
+  if author_ids:
+    if not isinstance(author_ids, list):
+      raise TypeError(f"author_ids: Expected a list of ints, got {type(author_ids).__name__} instead.")
+    for author_id in author_ids:
+      if not isinstance(author_id, int):
+        raise TypeError(f"author_ids: Expected int objects, got {type(author_id).__name__} instead.")
+  if timeout and not isinstance(timeout, int):
+    raise TypeError(f"timeout: Expected an int, got {type(timeout).__name__} instead.")
+
   return paginator(embeds, author_ids, timeout)
