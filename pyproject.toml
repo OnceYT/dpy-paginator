@@ -1,7 +1,7 @@
 [project]
 name = "dpy-paginator"
 version = "1.0.0"
-description = "A paginator utility for discord.py"
+description = "A paginator utility for discord.py with no additional dependencies that makes paginating embeds easier."
 authors = [
     {name = "OnceYT", email = "sahaa6919@gmail.com"},
 ]
@@ -22,7 +22,7 @@ discord.py = "^2.0.0"
 [tool.poetry]
 name = "dpy-paginator"
 version = "1.0.0"
-description = "A paginator utility for discord.py"
+description = "A paginator utility for discord.py with no additional dependencies that makes paginating embeds easier."
 authors = ["OnceYT <sahaa6919@gmail.com>"]
 license = "MIT"
 readme = "README.md"
