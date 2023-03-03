@@ -35,10 +35,11 @@ class paginateButtons(discord.ui.View):
     self.timeout = timeout
     self.interaction = interaction
     self.buttonModal.label = f"{page+1}/{len(self.embeds)}"
-    #self.remove_item(self.buttonPaginateLeftmost)
-     
     if len(self.embeds) < 4:
       self.buttonModal.disabled = True
+    if len(self.embeds) < 3:
+      self.remove_item(self.buttonPaginateLeftmost)
+      self.remove_items(self.buttonPaginateRightmost)     
     if self.page > 0:
       self.buttonPaginateLeftmost.disabled = False
       self.buttonPaginateLeft.disabled = False
