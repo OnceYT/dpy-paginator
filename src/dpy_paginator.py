@@ -39,7 +39,7 @@ class paginateButtons(discord.ui.View):
       self.buttonModal.disabled = True
     if len(self.embeds) < 3:
       self.remove_item(self.buttonPaginateLeftmost)
-      self.remove_items(self.buttonPaginateRightmost)     
+      self.remove_item(self.buttonPaginateRightmost)     
     if self.page > 0:
       self.buttonPaginateLeftmost.disabled = False
       self.buttonPaginateLeft.disabled = False
