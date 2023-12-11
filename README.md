@@ -83,7 +83,7 @@ async def example(ctx: commands.Context):
   output = paginate(embeds = [embed1, embed2])
   await ctx.send(embed = output.embed, view = output.view)
 ```
-This command has the following output:
+**This command has the following output:**
 
 ![discord.ext.Commands example image](https://i.imgur.com/7aOIIpK.png)
 
@@ -100,7 +100,7 @@ async def example_command(interaction: discord.Interaction):
   output = paginate(embeds = [embed1, embed2])
   await interaction.followup.send(embed = output.embed, view = output.view)  
 ```
-This command has the following output:
+**This command has the following output:**
 
 ![discord.app_commands (ephemeral) example image](https://i.imgur.com/tA78jy0.png)
 
@@ -114,7 +114,7 @@ You can control which user(s) can interact with the view by passing a `author_id
 
 output = paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
 ```
-When anyone except the specified user(s) try to interact, the paginator ignores that interaction:
+When anyone except the specified user(s) try to interact, **the paginator ignores that interaction:**
 
 ![author_ids error example image](https://i.imgur.com/QY7dTrw.png)
 
@@ -129,7 +129,7 @@ output = paginate(embeds = [embed1, embed2], timeout = 60)
 ```
 The buttons get automatically disabled after timeout (except when no button is interacted with)[^1]. You can also use `timeout = None` for no timeout.
 
-Example of a timedout view:
+**Example of a timedout view:**
 
 ![timedout image](https://i.imgur.com/qzI9eax.png)
 
