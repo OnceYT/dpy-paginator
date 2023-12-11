@@ -29,7 +29,7 @@ A discord.py utility with no external dependencies that makes paginating embeds 
 
 </details>
 
-Some of it's features are -
+Some of it's features include -
 - Easy to use.
 - Supports both ephemeral and non-ephemeral responses.
 - Buttons are enabled/disabled automatically depending on the current page number, number of embeds provided or at timeout.
@@ -148,6 +148,6 @@ if output.view.timedout: # check if the view is timedout
 
 # the view will automatically timeout incase this check returns False
 ```
-Note that incase of ephemeral responses (or scenarios where the output will be deleted before the timeout), this extra step is probably not worth it.
+Note that incase of ephemeral responses (or scenarios where the output will be deleted before the timeout), this extra step is not worth it.
 
 [^1]: To explain this, the `paginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
