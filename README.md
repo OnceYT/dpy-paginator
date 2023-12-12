@@ -1,6 +1,6 @@
 # dpy-paginator
 
-This is the development branch, for v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0).
+This is the development branch, for v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0). Open to suggestions, contact via the sources on my [site](https://onceyt.github.io/)
 
 <details>
 <summary><strong>Table of contents</strong></summary>
@@ -24,8 +24,10 @@ A discord.py utility with no external dependencies that makes paginating embeds 
 
 - [Support Discord Server](https://discord.gg/bwvR4dTqHT)
 - [Documentation](https://github.com/OnceYT/dpy-paginator/blob/main/README.md)
+- [Security Policy](https://github.com/OnceYT/dpy-paginator/blob/main/.github/SECURITY.md)
 - [Source](https://github.com/OnceYT/dpy-paginator)
 - [PyPi](https://pypi.org/project/dpy-paginator/)
+- [Contact](https://onceyt.github.io/)
 
 </details>
 
