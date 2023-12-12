@@ -117,7 +117,7 @@ class paginator():
 
 def paginate(embeds: list[discord.Embed], author_ids: list[int] = None, timeout: int = 90) -> paginator:
   """  
-  Returns a dpy_components.paginator object that contains the first embed
+  Returns a dpy_paginator.paginator object that contains the first embed
   and the view associated with it.
   
   Parameters 
