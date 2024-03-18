@@ -1,6 +1,8 @@
 # dpy-paginator
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dpy-paginator)
+![Downloads](https://static.pepy.tech/badge/dpy-paginator)
 
-This is the development branch, for v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0). Open to suggestions, contact via the sources on my [site](https://onceyt.github.io/)
+This is the development branch, for v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0). Open to suggestions, contact via the sources on my [site](https://onceyt.github.io/).
 
 <details>
 <summary><strong>Table of contents</strong></summary>
@@ -31,7 +33,7 @@ A discord.py utility with no external dependencies that makes paginating embeds 
 
 </details>
 
-Some of it's features include -
+Some of it's features include:
 - Easy to use.
 - Supports both ephemeral and non-ephemeral responses.
 - Buttons are enabled/disabled automatically depending on the current page number, number of embeds provided or at timeout.
