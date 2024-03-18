@@ -72,7 +72,7 @@ await Messagable.send(embed = output.embed, view = output.view)
 # you want to send both in your Messageable.send
 ```
 
-##### <a name='commands_usage'></a>discord.ext.Commands example:
+##### <a name='commands_usage'></a>discord.ext.Commands Example:
 ```py
 import discord
 from discord.ext import commands
@@ -91,7 +91,7 @@ async def example(ctx: commands.Context):
 
 ![discord.ext.Commands example image](https://i.imgur.com/7aOIIpK.png)
 
-##### <a name='appcommands_usage'></a>discord.app_commands usage: (ephemeral)
+##### <a name='appcommands_usage'></a>discord.app_commands Example: (ephemeral)
 ```py
 from discord import app_commands
 from dpy_paginator import paginate
