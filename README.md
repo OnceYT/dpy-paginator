@@ -33,12 +33,12 @@ A discord.py utility with no external dependencies that makes paginating embeds 
 
 </details>
 
-Some of it's features include:
+**Some of it's features include:**
 - Easy to use.
 - Supports both ephemeral and non-ephemeral responses.
 - Buttons are enabled/disabled automatically depending on the current page number, number of embeds provided or at timeout.
 
-The paginator consists of 4 buttons - ⏪, ◀️, 'Jump To' modal, ▶️, ⏩
+**The paginator consists of 4 buttons - ⏪, ◀️, 'Jump To' modal, ▶️, ⏩**
 - ⏪ - Shows the first embed. Disabled if there are less than 3 embeds or if already on the first embed.
 - ◀️ - Shows the previous embed. Disabled if already on the first embed.
 - 'Jump To' modal - Triggers a `discord.ui.Modal` that takes you to the page number you input. Disabled if there are less than 4 embeds.
