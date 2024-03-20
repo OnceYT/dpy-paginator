@@ -2,7 +2,7 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dpy-paginator)
 ![Downloads](https://static.pepy.tech/badge/dpy-paginator)
 
-This is the development branch, for v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0). Open to suggestions, contact via the sources on my [site](https://onceyt.github.io/).
+This is the development branch. For v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0). Open to suggestions, contact via the sources on my [site](https://onceyt.github.io/).
 
 <details>
 <summary><strong>Table of contents</strong></summary>
@@ -16,6 +16,7 @@ This is the development branch, for v1.0.0 documentation, visit [here](https://g
 - [Options and Parameters](#options)
     - [Control who can interact](#author_ids)
     - [Add a timeout](#timeout)
+    - [Using custom emojis in buttons](#button_emojis)
 </details>
 
 ##### <a name='overview'></a>Built and tested on [discord.py](https://github.com/Rapptz/discord.py) 2.1.1
@@ -153,5 +154,17 @@ if output.view.timedout: # check if the view is timedout
 # the view will automatically timeout incase this check returns False
 ```
 Note that incase of ephemeral responses (or scenarios where the output will be deleted before the timeout), this extra step is not worth it.
+
+##### <a name='button_emojis'></a>Using custom emojis in buttons: (`button_emojis: List[discord.Emoji]` param)
+
+You can use custom emojis in the buttons by passing a list of discord.Emoji objects or Unicode strongs. The list need to have exactly 4 elements.
+```py
+```
+
+**Example of a view using custom emojis:**
+
+![custom emojis in button example image]()
+
+Note that the package has no error handling for if you pass a non discord.Emoji object or Unicode string in the list. This is because explicitly checking for a discord.Emoji object will not accomodate using an Unicode string. Make sure you are passing the right objects or strings.
 
 [^1]: To explain this, the `paginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
