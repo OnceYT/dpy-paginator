@@ -157,7 +157,7 @@ Note that incase of ephemeral responses (or scenarios where the output will be d
 
 ##### <a name='button_emojis'></a>Using custom emojis in buttons: (`button_emojis: List[discord.Emoji]` param)
 
-You can use custom emojis in the buttons by passing a list of discord.Emoji objects or Unicode strongs. The list need to have exactly 4 elements.
+You can use custom emojis in the buttons by passing a list of discord.Emoji objects or Unicode strongs. The list needs to have exactly 4 elements.
 ```py
 ```
 
