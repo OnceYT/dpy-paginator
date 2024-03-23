@@ -1,6 +1,6 @@
 [project]
 name = "dpy-paginator"
-version = "1.0.0"
+version = "1.1.0"
 description = "A paginator utility for discord.py with no additional dependencies that makes paginating embeds easier."
 authors = [
     {name = "OnceYT", email = "sahaa6919@gmail.com"},
@@ -8,7 +8,7 @@ authors = [
 license = {text = "MIT"}
 dependencies = ["discord.py"]
 readme = "README.md"
-keywords = ["discord", "py", "discord.py", "paginator"]
+keywords = ["discord", "py", "discord.py", "paginator", "dpy-paginator"]
 
 [project.urls]
 Repository = "https://github.com/OnceYT/dpy-paginator"
@@ -21,7 +21,7 @@ discord.py = "^2.0.0"
 
 [tool.poetry]
 name = "dpy-paginator"
-version = "1.0.0"
+version = "1.1.0"
 description = "A paginator utility for discord.py with no additional dependencies that makes paginating embeds easier."
 authors = ["OnceYT <sahaa6919@gmail.com>"]
 license = "MIT"
