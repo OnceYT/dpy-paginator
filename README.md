@@ -157,14 +157,19 @@ Note that incase of ephemeral responses (or scenarios where the output will be d
 
 ##### <a name='button_emojis'></a>Using custom emojis in buttons: (`button_emojis: List[discord.Emoji]` param)
 
-You can use custom emojis in the buttons by passing a list of discord.Emoji objects or Unicode strongs. The list needs to have exactly 4 elements.
+You can use custom emojis in the buttons by passing a list of discord.Emoji objects or Unicode emoji strings. The list needs to have exactly 4 elements.
 ```py
+...
+output = paginate(embeds = [embed1, embed2, embed3, embed4], button_emojis = ['<:DarkerTan:945570099081920532>', '<:DazzlingRose:945561181467344977>', '<:FluorescentBlue:945561331547914280>', '😮'])
+
+# you can use unicode emojis (😮) directly
+# for discord.Emoji objects you can either use them directly in the <:name:id> format or fetch the object using guild.get_emoji(id) or some other functionality
 ```
 
 **Example of a view using custom emojis:**
 
-![custom emojis in button example image]()
+![custom emojis in button example image](https://i.imgur.com/h8cDhvZ.png)
 
-Note that the package has no error handling for if you pass a non discord.Emoji object or Unicode string in the list. This is because explicitly checking for a discord.Emoji object will not accomodate using an Unicode string. Make sure you are passing the right objects or strings.
+Note that the package has no error handling for if you pass a non discord.Emoji object or a non Unicode emoji string in the list. This is because explicitly checking for a discord.Emoji object will not accomodate using an Unicode string. Make sure you are passing the right objects or strings otherwise you will be getting the `HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body` error.
 
 [^1]: To explain this, the `paginateButtons` view class receives the `discord.Interaction` object only when one of the buttons is interacted with which is then used to edit the message with the disabled buttons upon timeout. Only running `paginate()` and sending the output does not give the class access to the message sent, thus resulting in the need of an extra step to satisfy this possibility.
