@@ -1,4 +1,4 @@
-# Copyright (c) 2023 OnceYT
+# Copyright (c) 2024 OnceYT
 # Licensed under the MIT License
 
 import discord
