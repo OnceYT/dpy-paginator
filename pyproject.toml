@@ -1,3 +1,7 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [project]
 name = "dpy-paginator"
 version = "1.1.0"
@@ -37,14 +41,10 @@ name = "dpy-paginator"
 version = "1.1.0"
 description = "A paginator utility for discord.py with no additional dependencies that makes paginating embeds easier."
 authors = ["OnceYT <sahaa6919@gmail.com>"]
-license = "MIT"
+license = "MIT License"
 readme = "README.md"
 homepage = "https://github.com/OnceYT/dpy-paginator"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 "discord.py" = "^2.0.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
