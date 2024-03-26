@@ -5,24 +5,27 @@ description = "A paginator utility for discord.py with no additional dependencie
 authors = [
     {name = "OnceYT", email = "sahaa6919@gmail.com"},
 ]
-license = {text = "MIT"}
+license = {text = "MIT License"}
 dependencies = ["discord.py"]
 readme = "README.md"
 keywords = ["discord", "py", "discord.py", "paginator", "dpy-paginator"]
+requires-python = ">= 3.8"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Operating System :: OS Independent",
 ]
 
 [project.urls]
-Repository = "https://github.com/OnceYT/dpy-paginator"
 Homepage = "https://github.com/OnceYT/dpy-paginator"
+Repository = "https://github.com/OnceYT/dpy-paginator"
 Documentation = "https://github.com/OnceYT/dpy-paginator/blob/main/README.md"
 
 [dependencies]
