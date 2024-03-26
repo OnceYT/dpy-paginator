@@ -48,7 +48,7 @@ pip install dpy-paginator
 ```
 or
 ```
-pip install git+https://github.com/onceyt/dpy-paginator.git@v1.0.0
+pip install git+https://github.com/onceyt/dpy-paginator.git@v1.1.0
 ```
 
 # <a name='usage'></a>Usage
