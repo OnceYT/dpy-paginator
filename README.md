@@ -2,8 +2,6 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dpy-paginator)
 ![Downloads](https://static.pepy.tech/badge/dpy-paginator)
 
-This is the development branch. For v1.0.0 documentation, visit [here](https://github.com/OnceYT/dpy-paginator/tree/v1.0.0). Open to suggestions, contact via the sources on my [site](https://onceyt.github.io/).
-
 <details>
 <summary><strong>Table of contents</strong></summary>
 
@@ -15,23 +13,21 @@ This is the development branch. For v1.0.0 documentation, visit [here](https://g
     - [discord.app_commands usage (ephemeral)](#appcommands_usage)
 - [Options and Parameters](#options)
     - [Control who can interact](#author_ids)
-    - [Add a timeout](#timeout)
+    - [Adding a timeout](#timeout)
     - [Using custom emojis in buttons](#button_emojis)
 </details>
 
-##### <a name='overview'></a>Built and tested on [discord.py](https://github.com/Rapptz/discord.py) 2.1.1
+##### <a name='overview'></a>Built and tested on [discord.py](https://github.com/Rapptz/discord.py) 2.3.2
 A discord.py utility with no external dependencies that makes paginating embeds easier.
 
 <details>
-<summary><h5>Quick links</h5></summary>
+<summary><strong>Quick links</strong></summary>
 
-- [Support Discord Server](https://discord.gg/bwvR4dTqHT)
-- [Documentation](https://github.com/OnceYT/dpy-paginator/blob/main/README.md)
+- [Documentation](https://github.com/OnceYT/dpy-paginator/blob/v1.1.0/README.md)
 - [Security Policy](https://github.com/OnceYT/dpy-paginator/blob/main/.github/SECURITY.md)
-- [Source](https://github.com/OnceYT/dpy-paginator)
+- [Source](https://github.com/OnceYT/dpy-paginator/tree/v1.1.0)
 - [PyPi](https://pypi.org/project/dpy-paginator/)
-- [Contact](https://onceyt.github.io/)
-
+- [Support/Contact](https://onceyt.github.io/)
 </details>
 
 **Some of it's features include:**
