@@ -30,6 +30,15 @@ A discord.py utility with no external dependencies that makes paginating embeds 
 - [Support/Contact](https://onceyt.github.io/)
 </details>
 
+<details>
+<summary><strong>Changelog (v1.0.0 -> v1.1.0 and v1.1.1)</strong></summary>
+
+- Added the ability to use [custom emojis in buttons](#button_emojis).
+- Code optimizations.
+- Code cleanup.
+- v1.1.0 -> v1.1.1 contains only readme updates and pyproject.toml changes for metadata.
+</details>
+
 **Some of it's features include:**
 - Easy to use.
 - Supports both ephemeral and non-ephemeral responses.
