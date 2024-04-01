@@ -18,7 +18,7 @@
 </details>
 
 ##### <a name='overview'></a>Built and tested on [discord.py](https://github.com/Rapptz/discord.py) 2.3.2
-A discord.py utility with no external dependencies that makes paginating embeds easier.
+[dpy-paginator](https://pypi.org/project/dpy-paginator/) is a discord.py utility with no external dependencies that makes paginating embeds easier.
 
 <details>
 <summary><strong>Quick links</strong></summary>
