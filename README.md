@@ -68,7 +68,7 @@ from dpy_paginator import paginate
 
 embed1 = discord.Embed(title = "This is embed#1")
 embed2 = discord.Embed(title = "This is embed#2")
-output = paginate(embeds = [embed1, embed2])
+output = await paginate(embeds = [embed1, embed2])
 
 # output.embed gives you the first embed of the pagination
 # output.view gives you the discord.ui.View that controls the pagination
@@ -90,7 +90,7 @@ bot = discord.Bot() # your discord.Bot object
 async def example(ctx: commands.Context):
   embed1 = discord.Embed(title = "This is Embed#1")
   embed2 = discord.Embed(title = "This is Embed#2")
-  output = paginate(embeds = [embed1, embed2])
+  output = await paginate(embeds = [embed1, embed2])
   await ctx.send(embed = output.embed, view = output.view)
 ```
 **This command has the following output:**
@@ -107,7 +107,7 @@ async def example_command(interaction: discord.Interaction):
   await interaction.response.defer(ephemeral = True, thinking = True)
   embed1 = discord.Embed(title = "This is Embed#1")
   embed2 = discord.Embed(title = "This is Embed#2")
-  output = paginate(embeds = [embed1, embed2])
+  output = await paginate(embeds = [embed1, embed2])
   await interaction.followup.send(embed = output.embed, view = output.view)  
 ```
 **This command has the following output:**
@@ -122,7 +122,7 @@ You can control which user(s) can interact with the view by passing a `author_id
 ```py
 ...
 
-output = paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
+output = await paginate(embeds = [embed1, embed2], author_ids = [#ID1, #ID2])
 ```
 When anyone except the specified user(s) try to interact, **the paginator ignores that interaction:**
 
@@ -135,7 +135,7 @@ By default, the view has a timeout of 90 seconds but this can be changed by pass
 ```py
 ...
 
-output = paginate(embeds = [embed1, embed2], timeout = 60)
+output = await paginate(embeds = [embed1, embed2], timeout = 60)
 ```
 The buttons get automatically disabled after timeout (except when no button is interacted with)[^1]. You can also use `timeout = None` for no timeout.
 
@@ -149,7 +149,7 @@ import asyncio
 ...
 timeout = 60
 
-output = paginate(embeds = [embed1, embed2], timeout = timeout)
+output = await paginate(embeds = [embed1, embed2], timeout = timeout)
 message = await Messageable.send(embed = output.embed, view = output.view)
 
 await asyncio.sleep(timeout + 0.5) # add 0.5 to the timeout to account for processing delays
@@ -165,7 +165,7 @@ Note that incase of ephemeral responses (or scenarios where the output will be d
 You can use custom emojis in the buttons by passing a list of discord.Emoji objects or Unicode emoji strings. The list needs to have exactly 4 elements.
 ```py
 ...
-output = paginate(embeds = [embed1, embed2, embed3, embed4], button_emojis = ['<:DarkerTan:945570099081920532>', '<:DazzlingRose:945561181467344977>', '<:FluorescentBlue:945561331547914280>', '😮'])
+output = await paginate(embeds = [embed1, embed2, embed3, embed4], button_emojis = ['<:DarkerTan:945570099081920532>', '<:DazzlingRose:945561181467344977>', '<:FluorescentBlue:945561331547914280>', '😮'])
 
 # you can use unicode emojis (😮) directly
 # for discord.Emoji objects you can either use them directly in the <:name:id> format or fetch the object using guild.get_emoji(id) or some other functionality
